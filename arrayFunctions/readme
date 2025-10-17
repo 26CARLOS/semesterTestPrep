@@ -1,0 +1,119 @@
+# ES6 Array Functions Guide
+
+## map
+Transforms each element and returns a new array.
+
+```js
+const doubled = [1, 2, 3].map(n => n * 2);
+```
+
+## filter
+Keeps elements that satisfy a condition.
+
+```js
+const evens = [1, 2, 3, 4].filter(n => n % 2 === 0);
+```
+
+## reduce
+Accumulates values into a single result.
+
+```js
+const sum = [1, 2, 3].reduce((acc, n) => acc + n, 0);
+```
+
+## find
+Returns the first matching element or `undefined`.
+
+```js
+const firstEven = [1, 3, 6].find(n => n % 2 === 0);
+```
+
+## some / every
+Tests array membership.
+
+```js
+[1, 2, 3].some(n => n > 2);   // true
+[1, 2, 3].every(n => n > 0); // true
+```
+
+## findIndex
+Returns the index of the first match or `-1`.
+
+```js
+const idx = ['a', 'b', 'c'].findIndex(ch => ch === 'b');
+```
+
+## includes
+Checks for existence.
+
+```js
+[1, 2, 3].includes(2); // true
+```
+
+## flat / flatMap
+Flattens arrays or maps then flattens.
+
+```js
+[1, [2, 3]].flat(); // [1, 2, 3]
+[1, 2, 3].flatMap(n => [n, n * 2]);
+```
+
+## forEach
+Runs a callback for every item (no returned array).
+
+```js
+['a', 'b', 'c'].forEach((letter, i) => console.log(i, letter));
+```
+
+## reduceRight
+Same as `reduce` but processes from right to left.
+
+```js
+const concat = ['a', 'b', 'c'].reduceRight((acc, ch) => acc + ch, '');
+// "cba"
+```
+
+## sort
+Sorts in place; provide a comparator for numbers.
+
+```js
+const nums = [3, 1, 4];
+nums.sort((a, b) => a - b); // [1, 3, 4]
+```
+
+## slice
+Copies a portion without mutating the original.
+
+```js
+const subset = [1, 2, 3, 4].slice(1, 3); // [2, 3]
+```
+
+## concat
+Merges arrays into a new one.
+
+```js
+const merged = [1, 2].concat([3, 4]); // [1, 2, 3, 4]
+```
+
+## entries / keys / values
+Iterators over `[index, value]`, indices, or values.
+
+```js
+for (const [i, val] of ['x', 'y'].entries()) {
+  console.log(i, val);
+}
+```
+
+## Array.from
+Creates arrays from array-like or iterable values.
+
+```js
+const chars = Array.from('ES6'); // ['E', 'S', '6']
+```
+
+## Array.of
+Builds arrays from arguments.
+
+```js
+const arr = Array.of(5, 6, 7); // [5, 6, 7]
+```

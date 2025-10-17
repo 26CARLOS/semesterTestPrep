@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Posts</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const { useEffect, useState } = React;
+
+    function PostsDisplay() {
+      const [posts, setPosts] = useState([]);
+
+      useEffect(() => {
+        fetch('posts.json')
+          .then(res => {
+            if (!res.ok) throw new Error('Failed to fetch posts');
+            return res.json();
+          })
+          .then(data => setPosts(data))
+          .catch(err => console.error(err));
+      }, []);
+
+      return (
+        <ul>
+          {posts.map(post => (
+            <li key={post.id}>{post.title}</li>
+          ))}
+        </ul>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<PostsDisplay />);
+  </script>
+</body>
+</html>
