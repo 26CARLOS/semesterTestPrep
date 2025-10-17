@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React State - Class Inheritance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Management System</h1>
+        <p class="subtitle">Using ES6 Classes & Inheritance</p>
+        
+        <!-- Add Student Form -->
+        <div class="card">
+            <h3>Add New Student</h3>
+            <form id="studentForm" onsubmit="addStudent(event)">
+                <input type="text" id="nameInput" placeholder="Name" required>
+                <input type="number" id="ageInput" placeholder="Age" required min="1">
+                <input type="text" id="idInput" placeholder="Student ID" required>
+                <input type="text" id="coursesInput" placeholder="Courses (comma separated)">
+                <button type="submit">Add Student</button>
+            </form>
+        </div>
+        
+        <!-- Student Actions -->
+        <div class="card">
+            <h3>Actions</h3>
+            <div class="button-group">
+                <button onclick="sortByAge()">Sort by Age</button>
+                <button onclick="sortByName()">Sort by Name</button>
+                <button onclick="filterByAge()">Filter Age ≥20</button>
+                <button onclick="showAllStudents()">Show All</button>
+            </div>
+        </div>
+        
+        <!-- Students Display -->
+        <div id="studentsContainer" class="students-grid"></div>
+    </div>
+    
+    <script src="models.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Programming Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Async Programming Project</h1>
+        <p class="subtitle">Promises, Async/Await & Promise Chains</p>
+        
+        <!-- Promises Demo -->
+        <div class="card">
+            <h3>🌐 Promises & Async/Await</h3>
+            <button onclick="fetchSimulatedData()" id="asyncBtn">Async/Await Demo</button>
+            <button onclick="chainedPromises()" id="chainBtn">Promise Chain Demo</button>
+            <button onclick="promiseAll()" id="allBtn">Promise.all Demo</button>
+            <div id="promiseResult" class="result"></div>
+        </div>
+        
+        <!-- Promise States -->
+        <div class="card">
+            <h3>📊 Promise States</h3>
+            <button onclick="demonstrateResolve()">Resolved Promise</button>
+            <button onclick="demonstrateReject()">Rejected Promise</button>
+            <button onclick="demonstratePending()">Pending Promise</button>
+            <div id="stateResult" class="result"></div>
+        </div>
+        
+        <!-- Real World Example -->
+        <div class="card">
+            <h3>🔄 Real World Example</h3>
+            <button onclick="fetchUserData()">Fetch User Data</button>
+            <button onclick="fetchMultipleUsers()">Fetch Multiple Users</button>
+            <div id="realWorldResult" class="result"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Manipulation Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Array Manipulation Project</h1>
+        
+        <div class="card">
+            <h3>Array Manipulation</h3>
+            <input 
+                type="text" 
+                id="arrayInput" 
+                value="[1, 2, 3, 4, 5]"
+                placeholder="Enter array: [1, 2, 3]"
+            />
+            
+            <div class="button-grid">
+                <button onclick="handleOperation('map')">map</button>
+                <button onclick="handleOperation('filter')">filter</button>
+                <button onclick="handleOperation('reduce')">reduce</button>
+                <button onclick="handleOperation('every')">every</button>
+                <button onclick="handleOperation('some')">some</button>
+                <button onclick="handleOperation('slice')">slice</button>
+                <button onclick="handleOperation('splice')">splice</button>
+                <button onclick="handleOperation('concat')">concat</button>
+                <button onclick="handleOperation('reverse')">reverse</button>
+                <button onclick="handleOperation('sort')">sort</button>
+                <button onclick="handleOperation('forEach')">forEach</button>
+                <button onclick="handleOperation('find')">find</button>
+                <button onclick="handleOperation('findIndex')">findIndex</button>
+                <button onclick="handleOperation('includes')">includes</button>
+                <button onclick="handleOperation('flat')">flat</button>
+            </div>
+            
+            <div id="arrayResult" class="result"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

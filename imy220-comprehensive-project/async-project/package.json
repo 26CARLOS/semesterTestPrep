@@ -1,0 +1,34 @@
+{
+  "name": "async-project",
+  "version": "1.0.0",
+  "description": "A React project demonstrating asynchronous JavaScript concepts including Promises and Async/Await.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "keywords": [
+    "react",
+    "async",
+    "promises",
+    "async-await"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3"
+  },
+  "devDependencies": {},
+  "homepage": "https://github.com/yourusername/async-project#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/async-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/async-project/issues"
+  }
+}

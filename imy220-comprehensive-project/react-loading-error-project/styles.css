@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    min-height: 300px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Loading State */
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading p {
+    color: #3498db;
+    font-size: 18px;
+}
+
+/* Error State */
+.error {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.error h2 {
+    color: #e74c3c;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.error p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.error button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.error button:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+}
+
+/* Posts List */
+.no-posts {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    padding: 40px;
+}
+
+.posts-list {
+    list-style: none;
+}
+
+.post-item {
+    padding: 16px;
+    margin-bottom: 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #a8edea;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+.post-item:hover {
+    transform: translateX(4px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-id {
+    background: #a8edea;
+    color: #333;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.post-title {
+    color: #333;
+    font-size: 16px;
+}

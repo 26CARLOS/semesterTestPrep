@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions Project - Closures & Recursion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Functions Project</h1>
+        <p class="subtitle">Closures and Recursion Demonstrations</p>
+        
+        <!-- Closures Demo -->
+        <div class="card">
+            <h3>Basic Closure Demo</h3>
+            <button onclick="demonstrateClosure()">Demonstrate Closure</button>
+            <div id="closureResult" class="result"></div>
+        </div>
+        
+        <!-- Counter Closure -->
+        <div class="card">
+            <h3>Counter using Closure</h3>
+            <p class="count-display">Current Count: <span id="counterValue">0</span></p>
+            <button onclick="handleIncrement()" class="btn-increment">Increment</button>
+            <button onclick="handleDecrement()" class="btn-decrement">Decrement</button>
+            <button onclick="resetCounter()" class="btn-reset">Reset</button>
+        </div>
+        
+        <!-- Multiplier Closure -->
+        <div class="card">
+            <h3>Multiplier Closure</h3>
+            <input type="number" id="multiplierInput" value="5" placeholder="Enter number to multiply">
+            <button onclick="demonstrateMultiplier()">Create Multipliers</button>
+            <div id="multiplierResult" class="result"></div>
+        </div>
+        
+        <!-- Recursion Demo -->
+        <div class="card">
+            <h3>Recursion Demonstration</h3>
+            <input type="number" id="factorialInput" value="5" placeholder="Factorial number">
+            <input type="number" id="fibonacciInput" value="7" placeholder="Fibonacci number">
+            <button onclick="demonstrateRecursion()">Calculate</button>
+            <div id="recursionResult" class="result"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

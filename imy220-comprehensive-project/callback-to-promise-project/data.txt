@@ -1,0 +1,1 @@
+This data was fetched via XMLHttpRequest wrapped in a Promise!
